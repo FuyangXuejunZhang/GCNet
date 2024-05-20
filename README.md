@@ -1,5 +1,10 @@
-#  GCNet: Global context-guided uncertainty boundary for polyp segmentation
+#  Adaptive Context Selection for Polyp Segmentation
 
+##  Introduction
+
+This repository contains the PyTorch implementation of:
+
+Adaptive Context Selection for Polyp Segmentation, MICCAI 2020.
 
 ##  Requirements
 
@@ -11,38 +16,43 @@
 * skimage
 * PIL
 * numpy
-### 1. Framework Overview
 
-<p align="center">
-    <img src="imgs/NETWORK.png"/> <br />
-    <em> 
-    Figure 1: Overview of the proposed GCNet.
-    </em>
-</p>
+##  Usage
 
-### 2. Training
+####  1. Training
 
 ```bash
 python train.py  --mode train  --dataset kvasir_SEG  
---train_data_dir /path  --valid_data_dir  /path
+--train_data_dir /path-to-train_data  --valid_data_dir  /path-to-valid_data
 ```
 
-###  3. Inference
+
+
+####  2. Inference
 
 ```bash
 python test.py  --mode test  --load_ckpt checkpoint 
---dataset kvasir_SEG    --test_data_dir  /path
+--dataset kvasir_SEG    --test_data_dir  /path-to-test_data
 ```
-###  4. result
-<p align="center">
-    <img src="imgs/result1.png"/> <br />
-    <em> 
-    Figure 2: vison of result.
-    </em>
-</p>
-<p align="center">
-    <img src="imgs/vison_edge.png"/> <br />
-    <em> 
-    Figure 3: vison of edge segmentation.
-    </em>
-</p>
+
+
+
+##  Citation
+
+If you feel this work is helpful, please cite our paper
+
+```
+@inproceedings{zhang2020adaptive,
+  title={Adaptive Context Selection for Polyp Segmentation},
+  author={Zhang, Ruifei and Li, Guanbin and Li, Zhen and Cui, Shuguang and Qian, Dahong and Yu, Yizhou},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={253--262},
+  year={2020},
+  organization={Springer}
+} 
+```
+
+
+
+
+
